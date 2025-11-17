@@ -17,15 +17,15 @@ Feels weird that copper oxidizes but iron doesn't? Well... this small mod solves
 </p>
 
 <p align="center">
-  <a href="https://www.paypal.com/donate/?hosted_button_id=WPVF2NFY2XHE6" target="_blank"><img width=256px src="./.github/donate_button_paypaldonate.webp" alt="donate with paypal"></a>
-  <a href="https://www.buymeacoffee.com/sopze" target="_blank"><img width=256px src="./.github/donate_button_buymeacoffee.webp" alt="buy me a coffee"></a>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=WPVF2NFY2XHE6" target="_blank"><img width=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/donate_button_paypaldonate.webp?raw=true" alt="donate with paypal"></a>
+  <a href="https://www.buymeacoffee.com/sopze" target="_blank"><img width=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/donate_button_buymeacoffee.webp?raw=true" alt="buy me a coffee"></a>
 </p>
 <hr>
 
 ### <p align="center">Screenshots</p>
 <p align="center">
-  <img height=256px src="./.github/preview1.webp?raw=true" alt="preview image">
-  <img height=256px src="./.github/screenshot0.webp?raw=true" alt="preview screenshot">
+  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/preview1.webp?raw=true" alt="preview image">
+  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/screenshot0.webp?raw=true" alt="preview screenshot">
 </p>
 <hr>
 
@@ -61,9 +61,9 @@ This is made to be **single-player**, but it also works in both **Local** and **
 
 ## Recipes
 <p align="center">
-  <img width=189px src="./.github/recipe_active_honeycomb.webp?raw=true" alt="honeycomb recipes">
-  <img width=284px src="./.github/recipe_grate_anim.webp?raw=true" alt="iron grate recipes">
-  <img width=582px src="./.github/recipe_coated_anim.webp?raw=true" alt="coated iron recipes">
+  <img width=189px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/recipe_active_honeycomb.webp?raw=true" alt="honeycomb recipes">
+  <img width=284px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/recipe_grate_anim.webp?raw=true" alt="iron grate recipes">
+  <img width=582px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/1.21.10/.github/recipe_coated_anim.webp?raw=true" alt="coated iron recipes">
 </p>
 <hr>
 
