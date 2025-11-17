@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "coated_weathered_iron_chain",
+  "ingredients": [
+    "ironrust:weathered_iron_chain",
+    "ironrust:active_honeycomb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ironrust:coated_weathered_iron_chain"
+  }
+}

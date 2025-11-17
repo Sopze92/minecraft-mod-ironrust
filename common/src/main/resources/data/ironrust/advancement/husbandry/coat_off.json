@@ -1,0 +1,77 @@
+{
+  "parent": "ironrust:husbandry/coat_on",
+  "criteria": {
+    "coat_off": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "ironrust:coated_iron_block",
+                  "ironrust:coated_exposed_iron",
+                  "ironrust:coated_weathered_iron",
+                  "ironrust:coated_oxidized_iron",
+                  "ironrust:coated_iron_door",
+                  "ironrust:coated_exposed_iron_door",
+                  "ironrust:coated_weathered_iron_door",
+                  "ironrust:coated_oxidized_iron_door",
+                  "ironrust:coated_iron_trapdoor",
+                  "ironrust:coated_exposed_iron_trapdoor",
+                  "ironrust:coated_weathered_iron_trapdoor",
+                  "ironrust:coated_oxidized_iron_trapdoor",
+                  "ironrust:coated_iron_bars",
+                  "ironrust:coated_exposed_iron_bars",
+                  "ironrust:coated_weathered_iron_bars",
+                  "ironrust:coated_oxidized_iron_bars",
+                  "ironrust:coated_iron_grate",
+                  "ironrust:coated_exposed_iron_grate",
+                  "ironrust:coated_weathered_iron_grate",
+                  "ironrust:coated_oxidized_iron_grate",
+                  "ironrust:coated_iron_chain",
+                  "ironrust:coated_exposed_iron_chain",
+                  "ironrust:coated_weathered_iron_chain",
+                  "ironrust:coated_oxidized_iron_chain"
+                ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:wooden_axe",
+                "minecraft:golden_axe",
+                "minecraft:stone_axe",
+                "minecraft:iron_axe",
+                "minecraft:iron_axe",
+                "minecraft:diamond_axe",
+                "minecraft:netherite_axe"
+              ]
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.husbandry.coat_off.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:stone_axe"
+    },
+    "title": {
+      "translate": "advancements.husbandry.coat_off.title"
+    }
+  },
+  "requirements": [
+    [
+      "coat_off"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

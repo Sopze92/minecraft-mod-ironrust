@@ -1,0 +1,69 @@
+{
+  "parent": "minecraft:husbandry/safely_harvest_honey",
+  "criteria": {
+    "coat_on": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:iron_block",
+                  "ironrust:exposed_iron",
+                  "ironrust:weathered_iron",
+                  "ironrust:oxidized_iron",
+                  "minecraft:iron_door",
+                  "ironrust:exposed_iron_door",
+                  "ironrust:weathered_iron_door",
+                  "ironrust:oxidized_iron_door",
+                  "minecraft:iron_trapdoor",
+                  "ironrust:exposed_iron_trapdoor",
+                  "ironrust:weathered_iron_trapdoor",
+                  "ironrust:oxidized_iron_trapdoor",
+                  "minecraft:iron_bars",
+                  "ironrust:exposed_iron_bars",
+                  "ironrust:weathered_iron_bars",
+                  "ironrust:oxidized_iron_bars",
+                  "ironrust:iron_grate",
+                  "ironrust:exposed_iron_grate",
+                  "ironrust:weathered_iron_grate",
+                  "ironrust:oxidized_iron_grate",
+                  "minecraft:iron_chain",
+                  "ironrust:exposed_iron_chain",
+                  "ironrust:weathered_iron_chain",
+                  "ironrust:oxidized_iron_chain"
+                ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "ironrust:active_honeycomb"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.husbandry.coat_on.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "ironrust:active_honeycomb"
+    },
+    "title": {
+      "translate": "advancements.husbandry.coat_on.title"
+    }
+  },
+  "requirements": [
+    [
+      "coat_on"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

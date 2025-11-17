@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:iron_block",
+    "ironrust:exposed_iron",
+    "ironrust:weathered_iron",
+    "ironrust:oxidized_iron",
+    "ironrust:coated_iron_block",
+    "ironrust:coated_exposed_iron",
+    "ironrust:coated_weathered_iron",
+    "ironrust:coated_oxidized_iron"
+  ]
+}

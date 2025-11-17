@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ironrust:block/active_honeycomb_block"
+  }
+}

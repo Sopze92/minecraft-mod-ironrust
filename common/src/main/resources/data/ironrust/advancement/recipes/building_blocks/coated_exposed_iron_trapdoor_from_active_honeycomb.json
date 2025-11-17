@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_exposed_iron_trapdoor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ironrust:exposed_iron_trapdoor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ironrust:coated_exposed_iron_trapdoor_from_active_honeycomb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_exposed_iron_trapdoor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ironrust:coated_exposed_iron_trapdoor_from_active_honeycomb"
+    ]
+  }
+}

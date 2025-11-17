@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_chain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_chain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ironrust:coated_iron_chain_from_active_honeycomb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_chain"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ironrust:coated_iron_chain_from_active_honeycomb"
+    ]
+  }
+}

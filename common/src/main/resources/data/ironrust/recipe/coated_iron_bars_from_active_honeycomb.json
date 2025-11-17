@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "coated_iron_bars",
+  "ingredients": [
+    "minecraft:iron_bars",
+    "ironrust:active_honeycomb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ironrust:coated_iron_bars"
+  }
+}

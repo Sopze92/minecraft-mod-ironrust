@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "icon": "assets/ironrust/icon.png",
+  "license": "${license}",
+  "authors": [
+    { "name": "Sergio 'sopze'", "contact": { "homepage": "https://sopze.com/", "email": "sergiodepa92@gmail.com" } }
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/ironrust",
+    "sources": "https://github.com/Sopze92/minecraft-mod-ironrust",
+    "issues": "https://github.com/Sopze92/minecraft-mod-ironrust/issues"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "link.ironrust.authorpage": "https://sopze.com/",
+        "link.ironrust.uninstaller": "https://github.com/Sopze92/minecraft-mod-ironrust/releases"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=${java_version}",
+    "minecraft": "${minecraft_version_range_fabric}",
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*"
+  },
+  "conflicts": {
+	  "ironrustwipe": "*"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "client": [ "com.sopze.mc.ironrust.IronRustClient" ],
+    "main": [
+      "com.sopze.mc.ironrust.IronRust"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.fabric.mixins.json"
+  ]
+}
+  

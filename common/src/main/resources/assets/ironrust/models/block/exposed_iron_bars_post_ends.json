@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_bars_post_ends",
+  "textures": {
+    "bars": "ironrust:block/exposed_iron_bars",
+    "edge": "ironrust:block/exposed_iron_bars"
+  }
+}

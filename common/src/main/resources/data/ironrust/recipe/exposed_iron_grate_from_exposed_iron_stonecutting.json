@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "ironrust:exposed_iron",
+  "result": {
+    "count": 4,
+    "id": "ironrust:exposed_iron_grate"
+  }
+}

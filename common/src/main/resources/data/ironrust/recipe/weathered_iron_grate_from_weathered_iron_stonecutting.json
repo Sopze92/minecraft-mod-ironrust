@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "ironrust:weathered_iron",
+  "result": {
+    "count": 4,
+    "id": "ironrust:weathered_iron_grate"
+  }
+}

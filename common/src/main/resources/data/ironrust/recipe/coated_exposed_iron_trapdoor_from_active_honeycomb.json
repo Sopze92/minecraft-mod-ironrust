@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "coated_exposed_iron_trapdoor",
+  "ingredients": [
+    "ironrust:exposed_iron_trapdoor",
+    "ironrust:active_honeycomb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ironrust:coated_exposed_iron_trapdoor"
+  }
+}

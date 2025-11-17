@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_bars_side",
+  "textures": {
+    "bars": "ironrust:block/weathered_iron_bars",
+    "edge": "ironrust:block/weathered_iron_bars"
+  }
+}

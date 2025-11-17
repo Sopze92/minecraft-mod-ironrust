@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "ironrust:exposed_iron_bars",
+    "ironrust:weathered_iron_bars",
+    "ironrust:oxidized_iron_bars",
+    "ironrust:coated_iron_bars",
+    "ironrust:coated_exposed_iron_bars",
+    "ironrust:coated_weathered_iron_bars",
+    "ironrust:coated_oxidized_iron_bars"
+  ]
+}

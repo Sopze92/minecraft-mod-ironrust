@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": "minecraft:honeycomb",
+    "R": "minecraft:redstone"
+  },
+  "pattern": [
+    "R ",
+    "HH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ironrust:active_honeycomb"
+  }
+}
