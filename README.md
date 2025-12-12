@@ -24,8 +24,8 @@ Feels weird that copper oxidizes but iron doesn't? Well... this small mod solves
 
 ### <p align="center">Screenshots</p>
 <p align="center">
-  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/preview1.webp?raw=true" alt="preview image">
-  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/screenshot0.webp?raw=true" alt="preview screenshot">
+  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/pv1.webp?raw=true" alt="preview image">
+  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/ss0.webp?raw=true" alt="preview screenshot">
 </p>
 <hr>
 
@@ -52,7 +52,7 @@ Feels weird that copper oxidizes but iron doesn't? Well... this small mod solves
 - Oxidized blocks work as their Vanilla counterparts
   - _(Blocks can make Beacons, Doors/Trapdoors require redstone)_
 
-<p align="center"><img width=512px src="./.github/preview0.webp?raw=true" alt="content"></p>
+<p align="center"><img width=512px src="./.github/pv0.webp?raw=true" alt="content"></p>
 <hr>
 
 ### <p align="center">Singleplayer / Online</p>
