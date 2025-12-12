@@ -17,15 +17,15 @@ Feels weird that copper oxidizes but iron doesn't? Well... this small mod solves
 </p>
 
 <p align="center">
-  <a href="https://www.paypal.com/donate/?hosted_button_id=WPVF2NFY2XHE6" target="_blank"><img width=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/donate_button_paypaldonate.webp?raw=true" alt="donate with paypal"></a>
-  <a href="https://www.buymeacoffee.com/sopze" target="_blank"><img width=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/donate_button_buymeacoffee.webp?raw=true" alt="buy me a coffee"></a>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=WPVF2NFY2XHE6" target="_blank"><img width=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/donate_button_paypaldonate.webp?raw=true" alt="donate with paypal"></a>
+  <a href="https://www.buymeacoffee.com/sopze" target="_blank"><img width=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/donate_button_buymeacoffee.webp?raw=true" alt="buy me a coffee"></a>
 </p>
 <hr>
 
 ### <p align="center">Screenshots</p>
 <p align="center">
-  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/pv1.jpg?raw=true" alt="preview image">
-  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/ss0.jpg?raw=true" alt="preview screenshot">
+  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/preview1.jpg?raw=true" alt="preview image">
+  <img height=256px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/screenshot0.jpg?raw=true" alt="preview screenshot">
 </p>
 <hr>
 
@@ -52,7 +52,7 @@ Feels weird that copper oxidizes but iron doesn't? Well... this small mod solves
 - Oxidized blocks work as their Vanilla counterparts
   - _(Blocks can make Beacons, Doors/Trapdoors require redstone)_
 
-<p align="center"><img width=512px src="./.github/pv0.jpg?raw=true" alt="content"></p>
+<p align="center"><img width=512px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/preview0.jpg?raw=true" alt="content"></p>
 <hr>
 
 ### <p align="center">Singleplayer / Online</p>
@@ -61,9 +61,9 @@ This is made to be **single-player**, but it also works in both **Local** and **
 
 ## Recipes
 <p align="center">
-  <img width=189px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/recipe_active_honeycomb.webp?raw=true" alt="honeycomb recipes">
-  <img width=284px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/recipe_grate_anim.webp?raw=true" alt="iron grate recipes">
-  <img width=582px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.github/recipe_coated_anim.webp?raw=true" alt="coated iron recipes">
+  <img width=189px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/recipe_active_honeycomb.webp?raw=true" alt="honeycomb recipes">
+  <img width=284px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/recipe_grate_anim.webp?raw=true" alt="iron grate recipes">
+  <img width=582px src="https://github.com/Sopze92/minecraft-mod-ironrust/blob/main/.resources/recipe_coated_anim.webp?raw=true" alt="coated iron recipes">
 </p>
 <hr>
 
