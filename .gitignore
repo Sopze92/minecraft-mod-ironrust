@@ -1,0 +1,20 @@
+# sopze
+.vscode
+_dev
+forge
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea/*
+!.idea/scopes
+
+# gradle
+build
+.gradle
+
+# other
+run
+runs
