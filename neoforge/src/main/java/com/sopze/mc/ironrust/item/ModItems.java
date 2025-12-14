@@ -8,7 +8,7 @@ import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -133,7 +133,7 @@ public class ModItems {
     return ITEMS.register(id, resLoc -> factory.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, resLoc))));
   }
   private static DeferredHolder<Item, ? extends Item> _register(Block block){
-    ResourceLocation resLoc= BuiltInRegistries.BLOCK.getKey(block);
+    Identifier resLoc= BuiltInRegistries.BLOCK.getKey(block);
     return ITEMS.registerItem(resLoc.getPath(), (props) -> new BlockItem(block, props), () -> new Item.Properties().setId(ResourceKey.create(Registries.ITEM, resLoc)).useBlockDescriptionPrefix());
   }
 

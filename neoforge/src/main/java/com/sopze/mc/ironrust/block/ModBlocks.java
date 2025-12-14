@@ -4,7 +4,7 @@ import com.sopze.mc.ironrust.mixin.BlocksMixinInvoker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
@@ -129,7 +129,7 @@ public class ModBlocks {
     };
   }
 
-  private static Block _register(String id, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) { return BlocksMixinInvoker.invoke_register(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, id)), factory, settings); }
+  private static Block _register(String id, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) { return BlocksMixinInvoker.invoke_register(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, id)), factory, settings); }
   private static Block _register(String id, BlockBehaviour.Properties settings) { return _register(id, Block::new, settings); }
 
   public static Boolean never(BlockState state, BlockGetter level, BlockPos pos, EntityType<?> entity) { return false; }

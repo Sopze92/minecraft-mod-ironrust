@@ -1,11 +1,8 @@
 package com.sopze.mc.ironrust.block;
 
-import com.ibm.icu.impl.Pair;
-import com.nimbusds.jose.util.Resource;
-import com.sopze.mc.ironrust.mixin.BlocksMixinInvoker;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -14,8 +11,6 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -72,7 +67,7 @@ public class ModBlocks {
     COATED_OXIDIZED_IRON_CHAIN;
 
   private static Block _create(RegisterEvent.RegisterHelper h, String id, Function<BlockBehaviour.Properties, Block> factory, Supplier<BlockBehaviour.Properties> settingsFactory) {
-    Block b= factory.apply(settingsFactory.get().setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, id))));
+    Block b= factory.apply(settingsFactory.get().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, id))));
     h.register(id, b);
     return b;
   }

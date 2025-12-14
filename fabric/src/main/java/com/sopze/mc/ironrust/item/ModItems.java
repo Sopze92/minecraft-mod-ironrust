@@ -9,8 +9,8 @@ import net.minecraft.core.dispenser.BlockSource;
 import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -122,7 +122,7 @@ public class ModItems {
     COATED_OXIDIZED_IRON_CHAIN = _register(ModBlocks.COATED_OXIDIZED_IRON_CHAIN);
   }
 
-  private static Item _register(String id, Function<Item.Properties, Item> factory) { return Items.registerItem(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, id)), factory); }
+  private static Item _register(String id, Function<Item.Properties, Item> factory) { return Items.registerItem(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, id)), factory); }
   private static Item _register(Block block){
     return Items.registerBlock(block);
   }

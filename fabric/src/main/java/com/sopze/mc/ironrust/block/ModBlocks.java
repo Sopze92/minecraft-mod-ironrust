@@ -1,8 +1,8 @@
 package com.sopze.mc.ironrust.block;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -124,7 +124,7 @@ public class ModBlocks {
     };
   }
 
-  private static Block _register(String id, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) { return Blocks.register(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, id)), factory, settings); }
+  private static Block _register(String id, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) { return Blocks.register(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MOD_ID, id)), factory, settings); }
   private static Block _register(String id, BlockBehaviour.Properties settings) { return _register(id, Block::new, settings); }
 
   public static void initialize(){}

@@ -2,7 +2,7 @@ package com.sopze.mc.ironrust.network;
 
 import com.sopze.mc.ironrust.Constants;
 import com.sopze.mc.ironrust.IronRustClient;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.ChannelBuilder;
 import net.minecraftforge.network.NetworkDirection;
@@ -12,7 +12,7 @@ import net.minecraftforge.network.SimpleChannel;
 public class ForgeNetwork {
 
   public static final SimpleChannel INSTANCE = ChannelBuilder.named(
-    ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "main"))
+      Identifier.fromNamespaceAndPath(Constants.MOD_ID, "main"))
     .acceptedVersions((s,v)->true)
     .networkProtocolVersion(1)
     .simpleChannel();

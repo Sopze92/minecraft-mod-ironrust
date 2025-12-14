@@ -1,6 +1,5 @@
 package com.sopze.mc.ironrust.item;
 
-import com.ibm.icu.impl.Pair;
 import com.sopze.mc.ironrust.Logger;
 import com.sopze.mc.ironrust.Main;
 import com.sopze.mc.ironrust.block.ModBlocks;
@@ -10,7 +9,7 @@ import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -78,13 +77,13 @@ public class ModItems {
     COATED_OXIDIZED_IRON_CHAIN;
 
   private static Item _create(RegisterEvent.RegisterHelper h, String id, Function<Item.Properties, Item> factory) {
-    Item i= factory.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, id))));
+    Item i= factory.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, id))));
     h.register(id, i);
     return i;
   }
 
   private static Item _create(RegisterEvent.RegisterHelper h, Block block){
-    ResourceLocation resLoc= BuiltInRegistries.BLOCK.getKey(block);
+    Identifier resLoc= BuiltInRegistries.BLOCK.getKey(block);
     Item i= new BlockItem(block, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, resLoc)).useBlockDescriptionPrefix());
     h.register(resLoc.getPath(), i);
     return i;
