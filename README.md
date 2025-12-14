@@ -4,6 +4,7 @@ Feels weird that copper oxidizes but iron doesn't? Well... this small mod solves
 
 <p align="center">
 <br>
+<img src="https://img.shields.io/badge/Minecraft-1.21.11-60c400?style=plastic">
 <img src="https://img.shields.io/badge/Minecraft-1.21.9+10-60c400?style=plastic">
 </p>
 <p align="center">
