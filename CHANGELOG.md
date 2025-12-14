@@ -1,13 +1,8 @@
-## IronRust v1.0.3F
+## IronRust v1.0.4F
 
-Final version, no more features will be added unless Mojang adds some new metal materials or new behaviour to the oxidizing mechanic
-
-+ Released NeoForge beta-experimental version (pretty untested)
-+ Dispensers can now apply active honeycomb on blocks
-+ Lightning strikes decrease oxidized state
-+ Added Spanish (all variants) translations
-+ Added Chinese (traditional) localization (by CurseForge:[junshengxie](https://legacy.curseforge.com/members/junshengxie))
-+ Added **auto-generated** localizations: Catalan, Euskera, Portuguese, Italian, French, Russian, German, Japanese
++ Released Forge version and updated NeoForge one, all 3 versions are fully functional
++ Coated Iron Block can now be de-crafted into 9 Iron Ingots
++ FIX: Neoforge block rendering issue
 
 ## IronRust-Wipe v1.0.1 (bumped)
 + Automatic IronRust changes reverter via on-read NBT injection, actively converts IDs during chunk-reading (notified in log)
@@ -25,6 +20,17 @@ Final version, no more features will be added unless Mojang adds some new metal 
     - bundles
 
 <hr><br>
+
+## IronRust v1.0.3F
+
+Final version, no more features will be added unless Mojang adds some new metal materials or new behaviour to the oxidizing mechanic
+
++ Released NeoForge beta-experimental version (pretty untested)
++ Dispensers can now apply active honeycomb on blocks
++ Lightning strikes decrease oxidized state
++ Added Spanish (all variants) translations
++ Added Chinese (traditional) localization (by CurseForge:[junshengxie](https://legacy.curseforge.com/members/junshengxie))
++ Added **auto-generated** localizations: Catalan, Euskera, Portuguese, Italian, French, Russian, German, Japanese
 
 ## IronRust v1.0.2B
 + Fixed a (stupid) bug causing no block were dropping its item on break
