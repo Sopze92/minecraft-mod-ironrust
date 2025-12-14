@@ -94,6 +94,8 @@ processResources {
             'mod_name'                          : mod_name,
             'mod_author'                        : mod_author,
             'mod_id'                            : mod_id,
+            'url_homepage'                      : url_homepage,
+            'url_issues'                        : url_issues,
             'license'                           : license,
             'description'                       : project.description,
             'neoforge_version'                  : neoforge_version,
@@ -112,7 +114,7 @@ processResources {
         expand expandProps
     }
 
-    filesMatching(['pack.mcmeta', 'fabric.mod.json', '*.mixins.json']) {
+    filesMatching(['pack.mcmeta', 'fabric.mod.json', 'mixins.*.json']) {
         expand jsonExpandProps
     }
 

@@ -2,48 +2,37 @@ package com.sopze.mc.ironrust;
 
 import com.sopze.mc.ironrust.block.ModBlocks;
 import com.sopze.mc.ironrust.item.ModItems;
+import com.sopze.mc.ironrust.network.BiGreetPacket;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
-import net.neoforged.neoforge.client.network.event.RegisterClientPayloadHandlersEvent;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.network.CustomPayloadEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import static com.sopze.mc.ironrust.Constants.*;
 
-@Mod(value= Constants.MOD_ID_CONST, dist= Dist.CLIENT)
 public class IronRustClient {
 
   private static boolean _SERVER_HAS_MOD = false;
   private static byte[] _SERVER_VERSION;
 
-  public IronRustClient(IEventBus bus) {
-
+  public static void initialize() {
     for(Block b : ModBlocks.CUTOUT_BLOCKS) ItemBlockRenderTypes.setRenderLayer(b, ChunkSectionLayer.CUTOUT);
 
-    bus.addListener(IronRustClient::onBuildCreativeTabContents);
-    bus.addListener(IronRustClient::onRegisterPayloadHandlers);
-
-    NeoForge.EVENT_BUS.addListener(IronRustClient::onUserConnected);
-    NeoForge.EVENT_BUS.addListener(IronRustClient::onUserDisconnected);
-	}
-
-  public static void onBuildCreativeTabContents(BuildCreativeModeTabContentsEvent event) {
-    ModItems.onBuildCreativeTabContents(event);
+    BuildCreativeModeTabContentsEvent.BUS.addListener(IronRustClient::onBuildCreativeTabContents);
+    ClientPlayerNetworkEvent.LoggingIn.BUS.addListener(IronRustClient::onUserConnected);
+    ClientPlayerNetworkEvent.LoggingOut.BUS.addListener(IronRustClient::onUserDisconnected);
   }
 
-  public static void onRegisterPayloadHandlers(RegisterClientPayloadHandlersEvent event) {
-    event.register(Network.GreetPayload.PAYLOAD_ID, IronRustClient::_onReceivedGreetPayload_Client);
-  }
+  public static void onBuildCreativeTabContents(BuildCreativeModeTabContentsEvent event) { ModItems.onBuildCreativeTabContents(event); }
 
   public static void onUserConnected(ClientPlayerNetworkEvent.LoggingIn event) {
     boolean local= event.getPlayer().connection.getConnection().isMemoryConnection();
@@ -58,9 +47,9 @@ public class IronRustClient {
     _SERVER_VERSION = new byte[] {0,0,0};
   }
 
-  public static void _onReceivedGreetPayload_Client(Network.GreetPayload payload, IPayloadContext context) {
+  public static void _onReceivedGreetPayload_Client(BiGreetPacket packet, CustomPayloadEvent.Context context) {
     _SERVER_HAS_MOD = true;
-    _SERVER_VERSION = payload.read();
+    _SERVER_VERSION = packet.version();
     final byte[] localVersion= Main.getLocalVersion();
 
     boolean valid= Util.isCompatibleVersion(_SERVER_VERSION);

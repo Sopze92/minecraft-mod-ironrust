@@ -1,43 +1,53 @@
 package com.sopze.mc.ironrust.mixin;
 
-import com.google.common.collect.BiMap;
 import com.sopze.mc.ironrust.block.I_Rustable;
 import com.sopze.mc.ironrust.item.ActiveHoneycombItem;
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 @Mixin(AxeItem.class)
 public class AxeItemMixin {
 
-  private static BlockState __STATE;
+  @Shadow private static void spawnSoundAndParticle(Level l, BlockPos bp, Player p, BlockState bs, SoundEvent se, int i) {}
 
-  @Inject(method = "evaluateNewBlockState", at= @At("HEAD"))
-  private void i_tryStrip_0(Level world, BlockPos pos, Player player, BlockState state, UseOnContext use, CallbackInfoReturnable<Optional<BlockState>> cir){
-    __STATE = state;
-  }
+  @ModifyVariable(method= "useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;", at = @At(value="STORE", ordinal= 0))
+  private Optional<BlockState> a_tryStrip_0(Optional<BlockState> var, UseOnContext context){
+    if(var.isEmpty()){
 
-  @Inject(method = "evaluateNewBlockState", at= @At("RETURN"))
-  private void i_tryStrip_1(Level world, BlockPos pos, Player player, BlockState state, UseOnContext use, CallbackInfoReturnable<Optional<BlockState>> cir){
-    __STATE = null;
-  }
+      Optional<BlockState> state;
 
-  @ModifyVariable( method = "evaluateNewBlockState", ordinal=1, at = @At( value = "STORE", ordinal=0 ))
-  private Optional<BlockState> a_tryStrip_0(Optional<BlockState> var){ return var.isEmpty() && __STATE != null ? I_Rustable.getPrevious(__STATE) : var; }
+      Level level = context.getLevel();
+      BlockPos blockPos = context.getClickedPos();
+      Player player = context.getPlayer();
+      BlockState blockState= level.getBlockState(blockPos);
 
-  @ModifyVariable( method = "evaluateNewBlockState", ordinal=2, at = @At( value = "STORE", ordinal=0 ))
-  private Optional<BlockState> a_tryStrip_1(Optional<BlockState> var){
-    return var.isEmpty() && __STATE != null ? Optional.ofNullable((Block)((BiMap) ActiveHoneycombItem.COATED_TO_UNCOATED_BLOCKS.get()).get(__STATE.getBlock())).map((block) -> block.withPropertiesOf(__STATE)) : var;
+      state = I_Rustable.getPrevious(blockState);
+      if (state.isPresent()) {
+        AxeItemMixin.spawnSoundAndParticle(level, blockPos, player, blockState, SoundEvents.AXE_SCRAPE, 3005);
+        return state;
+      }
+      else {
+        state= Optional.ofNullable(ActiveHoneycombItem.COATED_TO_UNCOATED_BLOCKS.get().get(blockState.getBlock()))
+          .map(b -> b.withPropertiesOf(blockState));
+        if (state.isPresent()) {
+          AxeItemMixin.spawnSoundAndParticle(level, blockPos, player, blockState, SoundEvents.AXE_WAX_OFF, 3004);
+          return state;
+        }
+      }
+    }
+    return var;
   }
 }

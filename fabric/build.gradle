@@ -22,7 +22,7 @@ loom {
   }
   splitEnvironmentSourceSets()
   mods {
-   "ironrust" {
+   "${mod_id}" {
     sourceSet sourceSets.main
     sourceSet sourceSets.client
    }
@@ -38,7 +38,7 @@ loom {
       server()
       setConfigName('server [fabric]')
       ideConfigGenerated(true)
-      runDir('./runs/fabric/server')
+      runDir('../runs/fabric/server')
     }
   }
 }

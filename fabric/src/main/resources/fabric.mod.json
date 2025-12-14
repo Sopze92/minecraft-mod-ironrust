@@ -39,8 +39,8 @@
     ]
   },
   "mixins": [
-    "${mod_id}.mixins.json",
-    "${mod_id}.fabric.mixins.json"
+    "mixins.common.json",
+    "mixins.fabric.common.json"
   ]
 }
   

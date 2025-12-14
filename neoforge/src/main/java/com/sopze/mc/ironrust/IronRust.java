@@ -23,26 +23,22 @@ public class IronRust implements I_LoaderWrapper {
 
     Main.initialize(this);
 
-    bus.addListener(IronRust::register);
     bus.addListener(IronRust::onCommonSetup);
+    bus.addListener(IronRust::onNetworkRegister);
+
     NeoForge.EVENT_BUS.addListener(IronRust::onUserConnected);
 
     ModBlocks.initialize();
     ModItems.initialize(bus);
 	}
 
-  @SubscribeEvent
-  public static void onCommonSetup(FMLCommonSetupEvent event) {
-    event.enqueueWork(ModItems::initializeAfter);
-  }
+  public static void onCommonSetup(FMLCommonSetupEvent event) { event.enqueueWork(ModItems::initializeAfter); }
 
-  @SubscribeEvent
-  public static void register(RegisterPayloadHandlersEvent event) {
+  public static void onNetworkRegister(RegisterPayloadHandlersEvent event) {
     final PayloadRegistrar registrar = event.registrar("1");
-    registrar.playBidirectional(Network.GreetPayload.PAYLOAD_ID, Network.GreetPayload.CODEC, (a,b)->{});
+    registrar.optional().playBidirectional(Network.GreetPayload.PAYLOAD_ID, Network.GreetPayload.CODEC, (a,b)->{});
   }
 
-  @SubscribeEvent
   public static void onUserConnected(PlayerEvent.PlayerLoggedInEvent event) {
     if(!(event.getEntity() instanceof ServerPlayer player)) return;
     if(player.level().isClientSide()) return;

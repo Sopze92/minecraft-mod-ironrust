@@ -1,7 +1,8 @@
 # sopze
+build-jar.bat
 .vscode
+.idea
 _dev
-forge
 
 # idea
 out

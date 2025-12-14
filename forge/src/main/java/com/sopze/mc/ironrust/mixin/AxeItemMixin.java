@@ -15,12 +15,13 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
+import javax.annotation.Nullable;
 import java.util.Optional;
 
 @Mixin(AxeItem.class)
 public class AxeItemMixin {
 
-  @Shadow private static void spawnSoundAndParticle(Level l, BlockPos bp, Player p, BlockState bs, SoundEvent se, int i) {}
+  @Shadow private static void spawnSoundAndParticle(Level l, BlockPos bp, @Nullable Player p, BlockState bs, SoundEvent se, int i) {}
 
   @ModifyVariable(method= "useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;", at = @At(value="STORE", ordinal= 0))
   private Optional<BlockState> a_tryStrip_0(Optional<BlockState> var, UseOnContext context){
