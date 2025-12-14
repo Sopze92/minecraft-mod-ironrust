@@ -8,11 +8,10 @@ base {
 }
 mixin {
     config("mixins.common.json")
-    config("mixins.forge.common.json")
 }
 jar {
     manifest {
-        attributes["MixinConfigs"] = "mixins.common.json,mixins.forge.common.json"
+        attributes["MixinConfigs"] = "mixins.forge.common.json"
     }
 }
 
