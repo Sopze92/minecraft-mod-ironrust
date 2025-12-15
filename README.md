@@ -74,7 +74,7 @@ Multiplayer implementation is done so it also works in Multiplayer games as long
 Download and drop the correct .jar file based on the ModLoader you're using into the **mods** folder located at Minecraft's root folder
 
 ## Uninstallation
-I've also made an Uninstaller-Mod-Tool (Local worlds only) (only available for Fabric) that automatically reverts all oxidized iron to Vanilla one during normal gameplay. The IronRust-Uninstaller can only be found in the [Releases Page](https://github.com/Sopze92/minecraft-mod-ironrust/releases).
+I've also made an Uninstaller-Mod-Tool (Local worlds only) that automatically reverts all oxidized iron to Vanilla one during normal gameplay. The IronRust-Uninstaller can only be found in the [Releases Page](https://github.com/Sopze92/minecraft-mod-ironrust/releases).
 
 <details>
 <summary><b>Uninstall guide</b></summary>
