@@ -17,13 +17,15 @@ neoForge {
     runs {
         configureEach {
             systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
-            ideName = "${it.name} [neoforge] (${project.path})"
+            ideName = "neoforge ${it.name.capitalize()}"
         }
         client {
             client()
+            gameDirectory = project.file('../runs/neoforge/client')
         }
         server {
             server()
+            gameDirectory = project.file('../runs/neoforge/server')
         }
     }
     mods {
