@@ -4,12 +4,11 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
 mixin {
-    config("mixins.common.json")
     config("mixins.forge.common.json")
 }
 jar {
     manifest {
-        attributes["MixinConfigs"] = "mixins.common.json,mixins.forge.common.json"
+        attributes["MixinConfigs"] = "mixins.forge.common.json"
     }
 }
 
@@ -31,7 +30,7 @@ minecraft {
 
     runs {
         client {
-            workingDirectory project.file('../runs/forge/client')
+            workingDirectory file('../runs/forge/client')
             ideaModule "${rootProject.name}.${project.name}.main"
             taskName 'Client'
             mods {
@@ -42,7 +41,7 @@ minecraft {
         }
 
         server {
-            workingDirectory project.file('../runs/forge/server')
+            workingDirectory file('../runs/forge/server')
             ideaModule "${rootProject.name}.${project.name}.main"
             taskName 'Server'
             mods {

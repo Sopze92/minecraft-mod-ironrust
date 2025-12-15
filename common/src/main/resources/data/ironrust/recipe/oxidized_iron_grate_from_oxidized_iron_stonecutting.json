@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "ironrust:oxidized_iron",
-  "result": {
-    "count": 4,
-    "id": "ironrust:oxidized_iron_grate"
-  }
-}

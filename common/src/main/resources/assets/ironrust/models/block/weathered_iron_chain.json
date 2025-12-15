@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_chain",
-  "textures": {
-    "texture": "ironrust:block/weathered_iron_chain"
-  }
-}

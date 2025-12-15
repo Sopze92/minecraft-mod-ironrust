@@ -11,27 +11,26 @@ public class Main {
   public static String _LOCAL_VERSION_STRING;
   public static byte[] _LOCAL_VERSION;
 
-  public static boolean
+  private static boolean
     _MOD_ENABLED_LOCALLY = false,
-    _MOD_WIPER_STATE = false;
+    MOD_TARGET_STATE= false;
 
 	public static void initialize(I_LoaderWrapper wrapper) {
     _WRAPPER= wrapper;
 
-    _MOD_WIPER_STATE = _WRAPPER.isModLoaded(WIPER_ID);
+    MOD_TARGET_STATE= _WRAPPER.isModLoaded(TARGET_ID);
 
-    _LOCAL_VERSION_STRING= _WRAPPER.computeVersionString();
-    _LOCAL_VERSION= Util._computeVersionBytes(_LOCAL_VERSION_STRING);
+    setEnabledLocally(!MOD_TARGET_STATE);
 
-    if (_MOD_WIPER_STATE) Logger.logWrn(LOC_MAIN, WRN_IRONRUST_CONFLICT);
-
-    setEnabledLocally(Util._isValidVersion());
+    if (MOD_TARGET_STATE) { Logger.logErr(LOC_MAIN, ERR_IRONRUST_CONFLICT); }
+    else{ Registry.initialize(); }
 	}
 
-  public static boolean isEnabledLocally(){ return _MOD_ENABLED_LOCALLY; }
-  public static void setEnabledLocally(boolean state){ _MOD_ENABLED_LOCALLY = state && !_MOD_WIPER_STATE; }
 
-  public static boolean isWiperModPresent(){ return _MOD_WIPER_STATE; }
+  public static boolean isEnabledLocally(){ return _MOD_ENABLED_LOCALLY; }
+  public static void setEnabledLocally(boolean state){ _MOD_ENABLED_LOCALLY = state && !MOD_TARGET_STATE; }
+
+  public static boolean isTargetModPresent(){ return MOD_TARGET_STATE; }
 
   public static String getLocalVersionString() { return _LOCAL_VERSION_STRING; }
   public static byte[] getLocalVersion() { return _LOCAL_VERSION; }

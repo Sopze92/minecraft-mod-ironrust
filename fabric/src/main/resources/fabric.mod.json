@@ -4,8 +4,8 @@
   "version": "${version}",
   "name": "${mod_name}",
   "description": "${description}",
-  "icon": "assets/ironrust/icon.png",
-  "license": "${license}",
+  "icon": "assets/${mod_id}/icon.png",
+  "license": "MIT",
   "authors": [
     { "name": "Sergio 'sopze'", "contact": { "homepage": "https://sopze.com/", "email": "sergiodepa92@gmail.com" } }
   ],
@@ -17,30 +17,22 @@
   "custom": {
     "modmenu": {
       "links": {
-        "link.ironrust.authorpage": "https://sopze.com/",
-        "link.ironrust.uninstaller": "https://github.com/Sopze92/minecraft-mod-ironrust/releases"
+        "Author Page": "https://sopze.com/"
       }
     }
   },
   "depends": {
-    "java": ">=${java_version}",
+    "java": ">=21",
     "minecraft": "${minecraft_version}",
-    "fabricloader": ">=${fabric_loader_version}",
+    "fabricloader": ">=0.17.3",
     "fabric-api": "*"
   },
   "conflicts": {
-	  "ironrustwipe": "*"
+	  "ironrust": "*"
   },
   "environment": "*",
   "entrypoints": {
-    "client": [ "com.sopze.mc.ironrust.IronRustClient" ],
-    "main": [
-      "com.sopze.mc.ironrust.IronRust"
-    ]
+    "main": [ "com.sopze.mc.ironrust.IronRustWipe" ]
   },
-  "mixins": [
-    "mixins.common.json",
-    "mixins.fabric.common.json"
-  ]
+  "mixins": [ "mixins.fabric.common.json" ]
 }
-  

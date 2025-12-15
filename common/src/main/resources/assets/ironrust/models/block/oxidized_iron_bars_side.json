@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_bars_side",
-  "textures": {
-    "bars": "ironrust:block/oxidized_iron_bars",
-    "edge": "ironrust:block/oxidized_iron_bars"
-  }
-}

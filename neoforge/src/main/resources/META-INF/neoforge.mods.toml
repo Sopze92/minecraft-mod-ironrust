@@ -11,8 +11,6 @@ logoFile="assets/${mod_id}/icon.png"
 authors="${mod_author}"
 description='''${description}'''
 [[mixins]]
-config="mixins.common.json"
-[[mixins]]
 config="mixins.neoforge.common.json"
 [[dependencies.${mod_id}]]
 modId="neoforge"

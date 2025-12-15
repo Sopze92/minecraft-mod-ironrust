@@ -2,17 +2,20 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.sopze.mc.ironrust.mixin",
-  "refmap": "${mod_id}.refmap.json",
-  "compatibilityLevel": "JAVA_21",
+  "refmap": "refmap.json",
+  "compatibilityLevel": "JAVA_18",
   "mixins": [
-    "AxeItemMixin",
-    "BlocksMixin",
-    "LightningBoltMixin"
+    "NbtMixin$CompoundTagMixin",
+    "WatchersMixin$ChunkTaskDispatcherMixin",
+    "WatchersMixin$LevelStorageSourceMixin",
+    "WatchersMixin$SerializableChunkDataMixin",
+    "WatchersMixin$UtilMixin"
   ],
   "client": [],
   "server": [],
   "injectors": {
-    "defaultRequire": 1
+    "defaultRequire": 1,
+    "maxShiftBy": 2
   }
 }
-  
+
