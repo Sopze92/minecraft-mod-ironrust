@@ -1,25 +1,15 @@
 ## IronRust v1.0.4F
 
-+ Released Forge version and updated NeoForge one, all 3 versions are fully functional
++ Added Forge version and updated NeoForge one, all 3 versions are fully functional
 + Coated Iron Block can now be de-crafted into 9 Iron Ingots
 + FIX: Neoforge block rendering issue
 
-## IronRust-Wipe v1.0.1 (bumped)
-+ Automatic IronRust changes reverter via on-read NBT injection, actively converts IDs during chunk-reading (notified in log)
-+ block/items converted are:
-    - [coated] exposed|weathered|oxidized items/blocks -> vanilla clean equivalent
-    - [coated] unaffected|exposed|weathered|oxidized Iron Grate block -> vanilla Iron block
-    - Active Honeycomb item/block -> vanilla standard Honeycomb item/block
-+ locations covered are:
-    - world blocks
-    - block entities slots
-    - main player inventory
-    - entities inventories
-    - dropped items
-    - item frames
-    - bundles
+## IronRust-Wipe v1.0.2F
++ Added Forge and NeoForge versions, (not tested in-deepth, please backup your worlds before using)
 
 <hr><br>
+
+# IronRust
 
 ## IronRust v1.0.3F
 
@@ -48,3 +38,22 @@ Final version, no more features will be added unless Mojang adds some new metal 
 + Active Honeycomb advancements
 + Recipe book entries for all new recipes
 + Server/Client basic checks
+
+<hr><br>
+
+# IronRust-Wipe (Uninstaller)
+
+## IronRust-Wipe v1.0.1
++ Automatic IronRust changes reverter via on-read NBT injection, actively converts IDs during chunk-reading (notified in log)
++ block/items converted are:
+    - [coated] exposed|weathered|oxidized items/blocks -> vanilla clean equivalent
+    - [coated] unaffected|exposed|weathered|oxidized Iron Grate block -> vanilla Iron block
+    - Active Honeycomb item/block -> vanilla standard Honeycomb item/block
++ locations covered are:
+    - world blocks
+    - block entities slots
+    - main player inventory
+    - entities inventories
+    - dropped items
+    - item frames
+    - bundles
