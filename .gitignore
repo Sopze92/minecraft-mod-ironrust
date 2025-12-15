@@ -1,5 +1,6 @@
 # sopze
 build-jar.bat
+genForgeRuns.bat
 .vscode
 .idea
 _dev
